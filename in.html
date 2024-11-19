@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shelby Brothers</title>
+    <style>
+      @font-face {
+        font-family: mon;
+        src: url(/presets/fonts/Montserrat-VariableFont_wght.ttf);
+      }
+      :root {
+        --color-primary: #403ccf;
+        --color-secondary: #eaebf3;
+        --color-text: #4a4959;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: mon;
+        line-height: 1.6;
+        color: var(--color-text);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+      }
+
+      @media (min-width: 768px) {
+        header {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+      .logo img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .header-content {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .header-content {
+          text-align: left;
+          margin-top: 0;
+          max-width: 50%;
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--color-primary);
+      }
+
+      .section {
+        padding: 2rem 0;
+      }
+
+      .grid {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .grid-3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .card {
+        background-color: var(--color-secondary);
+        padding: 1.5rem;
+        border-radius: 8px;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media (min-width: 768px) {
+        .flex {
+          flex-direction: row;
+        }
+      }
+
+      .flex-reverse {
+        flex-direction: column-reverse;
+      }
+
+      @media (min-width: 768px) {
+        .flex-reverse {
+          flex-direction: row-reverse;
+        }
+      }
+
+      .flex > * {
+        flex: 1;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: var(--color-primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin: 0.5rem;
+      }
+
+      .testimonial {
+        font-style: italic;
+      }
+
+      footer {
+        background-color: var(--color-secondary);
+        padding: 2rem 0;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/presets/img/shel.png" alt="Shelby Brothers Logo" />
+      </div>
+      <div class="header-content">
+        <h1>Shelby Brothers</h1>
+        <p>
+          Somos un gastropub moderno donde podrás disfrutar de deliciosas
+          hamburguesas artesanales, acompañadas de una selección de cervezas de
+          barril y una amplia carta de vinos. Nuestro ambiente es acogedor y
+          relajado, perfecto para disfrutar de una comida en compañía de amigos
+          o familiares.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <h2>Quienes somos</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Nuestra Historia</h3>
+            <p>
+              Somos una familia con raíces en Birmingham, Inglaterra, que ha
+              traído su amor por la buena comida y bebida a México.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Nuestra Misión</h3>
+            <p>
+              Ofrecer una experiencia única y memorable a nuestros clientes a
+              través de una combinación perfecta de hamburguesas artesanales y
+              cervezas de la más alta calidad.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Nuestros Valores</h3>
+            <p>
+              Pasión, calidad, autenticidad y un servicio excepcional son los
+              pilares que nos guían en cada paso.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Nuestros Platos</h2>
+        <div class="flex">
+          <img src="/presets/img/hambur.png" alt="Hamburguesa" />
+          <div class="grid">
+            <div class="card">
+              <h4>Combinaciones Perfectas</h4>
+              <p>
+                Nuestros expertos han creado pairings especiales entre nuestras
+                hamburguesas y cervezas para realzar aún más los sabores.
+              </p>
+            </div>
+            <div class="card">
+              <h4>Cervezas Artesanales</h4>
+              <p>
+                Una selección de cervezas de pequeños productores locales, con
+                sabores únicos y estilos innovadores que complementan a la
+                perfección nuestras hamburguesas.
+              </p>
+            </div>
+            <div class="card">
+              <h4>Hamburguesas Gourmet</h4>
+              <p>
+                Elaboradas con carne fresca de la mejor calidad, condimentadas
+                con los mejores ingredientes y servidas en un delicioso pan
+                artesanal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Ambiente</h2>
+        <div class="flex-reverse">
+          <img src="/presets/img/image.png" alt="Ambiente" />
+          <div class="grid grid-2">
+            <div class="card">
+              <h4>🍺 Bar de Cervezas</h4>
+              <p>
+                Amplia selección de cervezas artesanales a la vista de nuestros
+                comensales.
+              </p>
+            </div>
+            <div class="card">
+              <h4>🍔 Cocina Abierta</h4>
+              <p>
+                Nuestros chefs preparan las hamburguesas en una cocina a la
+                vista del público.
+              </p>
+            </div>
+            <div class="card">
+              <h4>🚀 Espacios Cómodos</h4>
+              <p>
+                Mesas y áreas de estar diseñadas para que nuestros clientes se
+                sientan como en casa.
+              </p>
+            </div>
+            <div class="card">
+              <h4>🎷 Música en Vivo</h4>
+              <p>
+                Disfruta de actuaciones de artistas locales que amenizan la
+                velada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <img
+        src="/presets/img/mapita.png"
+        alt="Mapa"
+        style="width: 100%; height: auto"
+      />
+
+      <section class="section">
+        <h2>Ubicación y horarios</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Ubicación</h3>
+            <p>
+              Nos encontramos en el corazón de la Ciudad de México, en la
+              colonia Condesa, una de las zonas más cosmopolitas y vibrantes de
+              la ciudad.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Horarios</h3>
+            <p>
+              Abrimos de martes a domingo, desde las 12:00 pm hasta las 12:00
+              am, para que puedas disfrutar de nosotros en cualquier momento.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Estacionamiento</h3>
+            <p>
+              Contamos con estacionamiento privado para que nuestros clientes
+              lleguen y se vayan con total comodidad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Promociones y Eventos Especiales</h2>
+        <div class="flex">
+          <img src="/presets/img/siu.png" alt="Promociones" />
+          <div>
+            <div class="card">
+              <h4>1. Promociones Semanales</h4>
+              <p>
+                Acumula puntos con cada visita y canjéalos por descuentos,
+                bebidas gratis y otros beneficios exclusivos.
+              </p>
+            </div>
+            <div class="card">
+              <h4>2. Eventos Temáticos</h4>
+              <p>
+                Organización de noches de música en vivo, catas de cerveza y
+                otras actividades únicas que harán de tu visita una experiencia
+                emocionante.
+              </p>
+            </div>
+            <div class="card">
+              <h4>3. Reservaciones Grupales</h4>
+              <p>
+                Contamos con espacios privados y menús personalizados para
+                recibir a grupos grandes y celebrar eventos especiales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Beneficios para clientes Frecuentes</h2>
+        <div class="flex-reverse">
+          <img src="/presets/img/img8.png" alt="Beneficios" />
+          <div>
+            <div class="card">
+              <h4>1. Programa de Lealtad</h4>
+              <p>
+                Acumula puntos con cada visita y canjéalos por descuentos,
+                bebidas gratis y otros beneficios exclusivos.
+              </p>
+            </div>
+            <div class="card">
+              <h4>2. Promociones Especiales</h4>
+              <p>
+                Nuestros clientes frecuentes tienen acceso a ofertas y eventos
+                privados que no están disponibles para el público en general.
+              </p>
+            </div>
+            <div class="card">
+              <h4>3. Atención Personalizada</h4>
+              <p>
+                Nuestro equipo conoce las preferencias de nuestros clientes
+                habituales y les brinda un servicio excepcional en cada visita.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Testimonios de nuestros comensales</h2>
+        <div class="grid grid-3">
+          <div class="card testimonial">
+            <h3>"¡Una experiencia inolvidable!"</h3>
+            <p>- María, Ciudad de México</p>
+            <p>
+              Las hamburguesas son increíbles y la selección de cervezas
+              artesanales es impresionante. Me sorprendió la calidad y el
+              ambiente acogedor.
+            </p>
+          </div>
+          <div class="card testimonial">
+            <h3>"¡Volveré una y otra vez!"</h3>
+            <p>- Juan, Querétaro</p>
+            <p>
+              Desde que descubrí Shelby Brothers, es mi restaurante favorito. La
+              comida es excelente y el servicio es excepcional.
+            </p>
+          </div>
+          <div class="card testimonial">
+            <h3>"¡Un lugar único en su tipo!"</h3>
+            <p>- Ana, Guadalajara</p>
+            <p>
+              Nunca había experimentado una combinación tan perfecta de
+              hamburguesas y cervezas artesanales. ¡Definitivamente un
+              must-visit!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Próximos Pasos</h2>
+        <div class="flex">
+          <img src="/presets/img/img9.png" alt="Próximos Pasos" />
+          <div>
+            <a href="#" class="btn">Reserva tu mesa</a>
+            <a href="#" class="btn">Descarga nuestra app</a>
+            <p>
+              ¡Prepárate para una experiencia gastronómica única! Reserva tu
+              mesa, descarga nuestra aplicación y conviértete en uno de nuestros
+              clientes frecuentes. ¡Te esperamos!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <img
+        src="/presets/img/img10.png"
+        alt="Footer"
+        style="width: 100%; height: auto"
+      />
+    </main>
+
+    <footer>
+      <div class="container">
+        <h2>Contacto y Redes</h2>
+        <div class="grid grid-3">
+          <div>
+            <h4>Contacto</h4>
+            <p>Teléfono: +52 (55) 1234 5678</p>
+            <p>Correo: info@shelbybrothers.mx</p>
+          </div>
+          <div>
+            <h4>Redes Sociales</h4>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Instagram</a></p>
+          </div>
+          <div>
+            <h4>Ubicación</h4>
+            <p>Av. Insurgentes Sur 123, Colonia Condesa, Ciudad de México</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
